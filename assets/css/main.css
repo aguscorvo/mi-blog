@@ -20,7 +20,8 @@ body {
   top: 0px; */
   width: 100vw;
   height: 100vh;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  font-family: monospace;
 }
 
 a {
@@ -53,4 +54,35 @@ header .header-icons-container .icons {
   justify-content: space-between;
   justify-self: end;
   margin-right: 50px;
+}
+
+header .icons span {
+  color: white;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 90px;
+}
+
+nav .nav-logo-container {
+  margin-left: 50px;
+}
+
+nav .nav-logo-container img {
+  width: 220px;
+  margin-top: 10px;
+}
+
+nav .profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+  font-weight: bold;
+}
+
+nav .profile-link a {
+  border-bottom: 1px solid black;
 }
