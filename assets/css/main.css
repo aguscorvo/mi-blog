@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+
 :root {
   --color-green: #47cfac;
+  --color-light-green: #88d6c3;
   --color-white: whitesmoke;
+  --color-grey: rgb(223, 221, 221);
 }
 
 * {
@@ -22,7 +26,12 @@ body {
   width: 100vw;
   height: 100vh;
   font-size: 1.7rem;
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
+  /* 
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Slab', serif; 
+  */
 }
 
 a {
@@ -61,6 +70,10 @@ header .icons span {
   color: var(--color-white);
 }
 
+header .icons span:hover {
+  color: white;
+}
+
 nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -87,40 +100,52 @@ nav .profile-link {
 
 nav .profile-link a {
   border-bottom: 1px solid black;
+  padding: 3px;
 }
 
-main {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../img/Cover.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+nav .profile-link a:hover {
+  background-color: var(--color-light-green);
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.home-main {
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: 1fr 4fr 1fr;
+  height: calc(100vh - 140px);
+  background: url(../img/Cover.png) no-repeat center/cover;
 }
 
-main h1 {
-  grid-row: 2/3;
-  width: 700px;
+.home-main section {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  margin-top: 80px;
+}
+
+.home-main h1 {
   color: var(--color-white);
-  line-height: 50px;
-  letter-spacing: 9px;
-  font-size: 3.5rem;
-  place-self: center;
+  letter-spacing: 10px;
+  font-size: 3.7rem;
   text-align: center;
-  margin-top: 10px;
+  /* place-self: center; */
 }
 
-main button {
+.home-main a {
   display: inline-block;
-  width: fit-content;
-  padding: 15px 25px 15px 25px;
+  height: fit-content;
+  padding: 15px 20px 15px 20px;
+  border: 2px solid var(--color-white);
+  border-radius: 15px;
   background-color: var(--color-green);
-  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.3rem;
   font-weight: bold;
   cursor: pointer;
-  grid-row: 4/5;
-  place-self: center;
-  margin-top: 10px;
+}
+
+.home-main a:hover {
+  background-color: var(--color-light-green);
 }
