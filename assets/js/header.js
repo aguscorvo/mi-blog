@@ -1,4 +1,4 @@
-fetch('./header.html')
+fetch('../assets/components/header.html')
   .then(response => {
     return response.text();
   })
